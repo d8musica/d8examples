@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import 'antd/dist/antd.css';
+import Axios from 'axios';
+
 import {
     Form,
     Input,
@@ -30,6 +32,7 @@ import {
       this.props.form.validateFieldsAndScroll((err, values) => {
         if (!err) {
           console.log('Received values of form: ', values);
+          Axios.post("/a",values)
         }
       });
     };

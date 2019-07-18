@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Form, Icon, Input, Button, Checkbox,Row, Col } from 'antd';
+import Axios from 'axios';
 
 
 class NormalLoginForm extends React.Component {
@@ -8,7 +9,9 @@ class NormalLoginForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        console.log('Received values of form: ', values)
+        
+
       }
     });
   };
