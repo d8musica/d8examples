@@ -1,16 +1,19 @@
 {
   "name": "create-next-example-app",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE__ENV=production node server.js -p $PORT"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-less": "^1.0.1",
     "antd": "^3.20.3",
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
     "next": "^9.0.2",
     "next-images": "^1.1.2",
+    "nodemon": "^1.19.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

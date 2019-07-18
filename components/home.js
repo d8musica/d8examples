@@ -96,8 +96,8 @@ import {
         initialValue: '86',
       })(
         <Select style={{ width: 70 }}>
-          <Option value="86">+86</Option>
-          <Option value="87">+87</Option>
+          <Option value="86">+1</Option>
+          <Option value="87">+57</Option>
         </Select>,
       );
   
@@ -172,18 +172,6 @@ import {
                 })(<Input style={{ width: '100%' }} />)}
             </Form.Item>
             
-            <Form.Item label="Captcha" extra="We must make sure that your are a human.">
-                <Row gutter={8}>
-                <Col span={12}>
-                    {getFieldDecorator('captcha', {
-                    rules: [{ required: true, message: 'Please input the captcha you got!' }],
-                    })(<Input />)}
-                </Col>
-                <Col span={12}>
-                    <Button>Get captcha</Button>
-                </Col>
-                </Row>
-            </Form.Item>
             <Form.Item {...tailFormItemLayout}>
                 {getFieldDecorator('agreement', {
                 valuePropName: 'checked',

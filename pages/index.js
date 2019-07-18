@@ -6,13 +6,13 @@ import Head from '../components/head'
 import Homes from '../components/home'
 import Nav from '../components/nav'
 
-import 'antd/dist/antd.css';
 
 
 
 const Home = () => (
   <div>
     <Head title="Home" />
+
     <Login/>
     <Homes/>
     
