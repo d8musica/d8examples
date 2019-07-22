@@ -1,5 +1,5 @@
 {
-  "name": "create-next-example-app",
+  "name": "1",
   "scripts": {
     "dev": "nodemon server.js",
     "build": "next build",

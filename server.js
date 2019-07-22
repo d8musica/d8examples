@@ -9,6 +9,15 @@ const handle = app.getRequestHandler()
 
 const url = 'mongodb+srv://admin:admin@cluster0-9doht.mongodb.net/test?retryWrites=true&w=majority'
 
+mongoose.connect(url, { useNewUrlParser: true })
+.then(() => {
+  console.log('chupelo')
+})
+.catch((err) => {
+  console.log('Error on start: ' + err.stack);
+  process.exit(1);
+});
+
 var Schema = mongoose.Schema;
 
   var userSchema = new Schema({
@@ -37,6 +46,16 @@ app.prepare().then(() => {
     newUser.save()
     
     console.log(newUser)
+
+  })
+
+  server.get('/a', (req, res) => {
+    
+    User.find().then (
+      users => {
+        return res.json({ users })
+      }
+    )
 
   })
 
